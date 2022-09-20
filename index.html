@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Picker</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div>
+        <div class="title">
+            <h2>RANDOM NAME PICKER</h2>
+        </div>
+        <div class="data-container">
+            <div class="data">
+                <div class="input-data">
+                    <form onreset="saveNama()" id="nama-peserta">
+                        <p><b>Insert Name : </b></p>
+                        <input id="input-nama" type="text" />
+                        <button type="reset">Insert</button>
+                    </form>
+                </div>
+                <div id="data-peserta" class="output-data">
+                    <p><b>Name List : </b></p>
+                </div>
+            </div>
+
+            <button class="reset-button" onclick="reset()">Reset</button>
+        </div>
+        <div id="modal-container" class="modal">
+            <div class="modal-inside">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+                <div id="modal-result"></div>
+                <div class="modal-footer">
+                    <button onclick="closeModal()" id="close-modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="picker">
+            <button onclick="setPilih()">Random Picker</button>
+            <input type="text" id="hasil" disabled />
+        </div>
+    </div>
+    <script type="application/javascript" src="index.js"></script>
+</body>
+
+</html>
